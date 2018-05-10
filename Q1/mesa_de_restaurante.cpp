@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include <mesa_de_restaurante.h> 
-#include <pedido.h>
+#include "mesa_de_restaurante.h" 
+#include "pedido.h"
 
 using namespace std;
 
@@ -40,7 +40,7 @@ double MesaDeRestaurante::calculaTotal(){
 
     for(i = 0; i < 10; i++){
         somaPreco += pedidos[i]->getPreco();
-        somaQuantidade += pedidos[i]->getQuantidade;
+        somaQuantidade += pedidos[i]->getQuantidade();
     }
 
     return somaPreco * somaQuantidade;
